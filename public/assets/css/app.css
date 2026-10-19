@@ -1,0 +1,527 @@
+/* ==========================================================================
+   BikeGo - app.css
+   Components used by the dynamic pages (Laravel views). Loaded after style.css.
+   Sections:
+     1. Alerts, badges, chips, buttons
+     2. Forms (extras) and star rating input
+     3. Tables and pagination
+     4. Dialogs (confirmation + station detail)
+     5. Station accordion / detail extras
+     6. Admin layout
+     7. Small screens
+   ========================================================================== */
+
+/* ---------- 1. Alerts, badges, chips, buttons ---------- */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.alert-success {
+  color: #0b5d2f;
+  background: #e3f7ec;
+  border-color: #a8e2c2;
+}
+
+.alert-error {
+  color: #8a1f24;
+  background: #fde8e9;
+  border-color: #f4b6b9;
+}
+
+.alert-info {
+  color: #0b4f86;
+  background: #e5f2fd;
+  border-color: #a9d3f5;
+}
+
+.badge,
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+
+/* Colour 1 / 2: station and bike condition (green = fine, red = problem) */
+.badge-ok {
+  color: #0b5d2f;
+  background: #ddf5e8;
+}
+
+.badge-bad {
+  color: #9a1c22;
+  background: #fde1e2;
+}
+
+.badge-warn {
+  color: #8a5a00;
+  background: #fff1cf;
+}
+
+/* Colour 3 / 4: how many bikes / free docks are left (blue = plenty, orange = few) */
+.chip-good {
+  color: #0b4f86;
+  background: #dcedfc;
+}
+
+.chip-bad {
+  color: #9a4a00;
+  background: #ffe6cc;
+}
+
+.muted {
+  color: var(--c-muted);
+}
+
+.btn-light {
+  color: var(--c-ink);
+  background: #e4edf3;
+}
+
+.btn-light:hover {
+  background: #d3e0ea;
+}
+
+.btn-danger {
+  background: var(--c-bad);
+}
+
+.btn-danger:hover {
+  background: #c0353a;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.section-sub {
+  margin: -12px 0 18px;
+  color: var(--c-muted);
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 22px 0 10px;
+  font-size: 1.15rem;
+}
+
+/* ---------- 2. Forms (extras) and star rating input ---------- */
+.field input.invalid {
+  border-color: var(--c-bad);
+  background: #fff6f6;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field select:disabled,
+.field input:disabled {
+  color: var(--c-muted);
+  background: #eef3f7;
+}
+
+.form-note {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--c-muted);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+.counter {
+  display: block;
+  text-align: right;
+}
+
+.rating-block {
+  margin-bottom: 18px;
+  padding: 12px 14px 4px;
+  border: 1px solid var(--c-line);
+  border-radius: 10px;
+}
+
+.rating-block legend {
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+/* Radio buttons are written 5..1 in the HTML and shown 1..5 (row-reverse),
+   so "label ~ label" colours every star on the left of the hovered / checked one. */
+.star-input {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  margin: 4px 0;
+}
+
+.star-input input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.star-input label {
+  padding: 0 3px;
+  font-size: 1.8rem;
+  color: #c5d0da;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.star-input label:hover,
+.star-input label:hover ~ label,
+.star-input input:checked ~ label {
+  color: #f5b800;
+}
+
+.star-input label:hover {
+  transform: scale(1.15);
+}
+
+.star-input input:focus-visible + label {
+  outline: 2px solid var(--c-primary);
+}
+
+/* ---------- 3. Tables and pagination ---------- */
+.table-wrap {
+  overflow-x: auto;
+  background: var(--c-card);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.data-table thead th {
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: #f6fafc;
+}
+
+.data-table tbody tr:hover {
+  background: #f1fbf9;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.data-table .actions {
+  white-space: nowrap;
+}
+
+.data-table .actions form {
+  display: inline;
+}
+
+.data-table .col-check {
+  width: 44px;
+  text-align: center;
+}
+
+.data-table .empty-cell {
+  padding: 24px;
+  text-align: center;
+  color: var(--c-muted);
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0;
+}
+
+.pager .page {
+  min-width: 38px;
+  padding: 7px 12px;
+  text-align: center;
+  color: var(--c-ink);
+  background: var(--c-card);
+  border: 1px solid var(--c-line);
+  border-radius: 8px;
+}
+
+.pager a.page:hover {
+  text-decoration: none;
+  background: #eefaf8;
+  border-color: var(--c-primary);
+}
+
+.pager .page.active {
+  color: #ffffff;
+  font-weight: 700;
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+}
+
+.pager .page.disabled {
+  color: #9db0bf;
+  background: #f1f5f8;
+}
+
+/* ---------- 4. Dialogs ---------- */
+dialog.modal {
+  width: 92%;
+  max-width: 560px;
+  padding: 22px;
+  color: var(--c-ink);
+  background: var(--c-card);
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(15, 42, 61, 0.35);
+}
+
+dialog.modal::backdrop {
+  background: rgba(15, 42, 61, 0.55);
+}
+
+dialog.modal-small {
+  max-width: 400px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  color: var(--c-muted);
+  background: #eef3f7;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #dbe6ee;
+}
+
+.confirm-message {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ---------- 5. Station accordion / detail extras ---------- */
+.acc-head {
+  flex-wrap: wrap;
+}
+
+.acc-title {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.acc-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-lines {
+  display: grid;
+  gap: 8px;
+  color: var(--c-ink);
+}
+
+.detail-lines i,
+.info-list i {
+  color: var(--c-primary);
+}
+
+.detail-card {
+  padding: 18px;
+  background: var(--c-card);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.review-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.review-list li {
+  padding: 8px 12px;
+  color: var(--c-ink);
+  background: #f4f9fb;
+  border-left: 3px solid var(--c-primary);
+  border-radius: 6px;
+}
+
+.rating-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- 6. Admin layout ---------- */
+.admin-header {
+  background: var(--c-card);
+  border-bottom: 3px solid var(--c-primary);
+}
+
+.admin-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  min-height: 68px;
+}
+
+.admin-tag {
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  color: #ffffff;
+  background: var(--c-primary-dark);
+  border-radius: 6px;
+}
+
+.admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
+.admin-nav a {
+  padding: 8px 14px;
+  color: var(--c-ink);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  text-decoration: none;
+  color: #ffffff;
+  background: var(--c-primary);
+}
+
+.admin-card {
+  display: block;
+  color: var(--c-ink);
+  transition: transform 0.2s ease;
+}
+
+.admin-card:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+/* ---------- 7. Small screens ---------- */
+@media (max-width: 720px) {
+  /* Tables turn into cards: every cell shows its column title */
+  .data-table,
+  .data-table tbody,
+  .data-table tr,
+  .data-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tr {
+    padding: 8px 0;
+    border-bottom: 6px solid var(--c-bg);
+  }
+
+  .data-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    text-align: right;
+    border-bottom: 0;
+  }
+
+  .data-table td::before {
+    content: attr(data-label);
+    flex: none;
+    font-weight: 700;
+    color: var(--c-muted);
+    text-align: left;
+  }
+
+  .data-table .col-check {
+    width: 100%;
+    text-align: left;
+  }
+
+  .data-table td.col-check::before {
+    content: "Chọn";
+  }
+
+  .data-table .actions {
+    white-space: normal;
+  }
+
+  .admin-header .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

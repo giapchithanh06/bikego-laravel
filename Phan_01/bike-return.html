@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giáp Chí Thanh – 2001240441</title>
+  <!-- Icon font (local copy, works offline) -->
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Shared layout and components -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header: logo ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html"><img src="img/logo.svg" alt="BikeGo"></a>
+    </div>
+  </header>
+
+  <!-- ===== Navigation + banner (CSS animation only) ===== -->
+  <section class="hero" aria-label="Banner">
+    <div class="container">
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="stations.html">Trạm xe</a></li>
+          <li><a href="#">Đăng nhập</a></li>
+          <li><a href="#">Đăng ký</a></li>
+        </ul>
+      </nav>
+      <div class="hero-actions">
+        <a class="hero-btn" href="bike-rental.html">Thuê xe</a>
+        <a class="hero-btn" href="bike-return.html">Trả xe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Page content ===== -->
+  <main class="page-main">
+    <div class="container">
+
+      <section class="section">
+        <h2 class="section-title"><i class="bi bi-lock-fill"></i><span class="scramble-text">Trả xe</span></h2>
+        <form class="form-card" action="#" method="post">
+          <p><strong>Thông tin xe đang thuê:</strong></p>
+          <ul class="info-list">
+            <li><i class="bi bi-clock"></i> Thời gian bắt đầu thuê:</li>
+            <li><i class="bi bi-bicycle"></i> Biển số xe:</li>
+            <li><i class="bi bi-geo-alt"></i> Tên trạm lấy xe:</li>
+            <li><i class="bi bi-hourglass-split"></i> Số phút thuê tính tới hiện tại:</li>
+            <li><i class="bi bi-cash-coin"></i> Số tiền thuê:</li>
+          </ul>
+          <p><strong>Chọn trạm trả xe:</strong></p>
+          <div class="field">
+            <label for="ward">Phường</label>
+            <select id="ward" name="ward"><option value="">Chọn Phường</option></select>
+          </div>
+          <div class="field">
+            <label for="station">Trạm</label>
+            <select id="station" name="station"><option value="">Chọn Trạm</option></select>
+          </div>
+          <button class="btn btn-block" type="submit">Trả xe và thanh toán</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <img src="img/logo-thanhdoan.svg" alt="Thành Đoàn TP.HCM">
+      <div>
+        <p>&copy; 2026 Thành Đoàn TP.HCM. Bản quyền thuộc về Thành Đoàn TP.HCM.</p>
+        <p>Địa chỉ: Số 1 Phạm Ngọc Thạch, Quận 1, TP HCM</p>
+        <p>Email: <a href="mailto:thanhdoan@tphcm.gov.vn">thanhdoan@tphcm.gov.vn</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/effects.js"></script>
+</body>
+</html>

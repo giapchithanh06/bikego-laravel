@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" width="220" height="64" role="img" aria-label="BikeGo">
+  <title>BikeGo</title>
+  <!-- Original BikeGo logo: a stylised bicycle + wordmark -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1fd1a5"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="14" cy="42" r="11"/>
+    <circle cx="50" cy="42" r="11"/>
+    <path d="M14 42 L27 22 L44 22 L50 42 M27 22 L36 42 L14 42 M36 42 L44 22 M24 16 L32 16 M43 16 L47 22"/>
+  </g>
+  <text x="72" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#0f2a3d">Bike<tspan fill="#0e9f8e">Go</tspan></text>
+</svg>

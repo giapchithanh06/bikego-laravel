@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Thanh Doan TP.HCM">
+  <title>Thanh Doan TP.HCM</title>
+  <!-- PLACEHOLDER emblem. Replace this file with the official logo supplied by the exam organisers. -->
+  <circle cx="32" cy="32" r="30" fill="#0f6fb5" stroke="#8fd3ff" stroke-width="2"/>
+  <polygon fill="#ffd34d" points="32,12 36.7,25.5 51,25.8 39.6,34.4 43.7,48 32,40 20.3,48 24.4,34.4 13,25.8 27.3,25.5"/>
+  <text x="32" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#ffffff">TP.HCM</text>
+</svg>

@@ -267,7 +267,7 @@ This project was developed for educational purposes to practice:
 
 ## 👨‍💻 Authors
 
-Giáp Chí Thanh – 2001240441
+Giáp Chí Thanh
 
 Student Project – BIKEGO Public Bicycle Rental Website
 

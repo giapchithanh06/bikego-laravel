@@ -269,7 +269,7 @@ This project was developed for educational purposes to practice:
 
 Giáp Chí Thanh 
 
-Student Project – BIKEGO Public Bicycle Rental Website
+Student Project – BIKEGO Public Bicycle Rental Website.
 
 ## 📄 License
 

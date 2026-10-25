@@ -268,7 +268,6 @@ This project was developed for educational purposes to practice:
 ## 👨‍💻 Authors
 
 Giáp Chí Thanh 
-(giapchithanh06)
 
 Student Project – BIKEGO Public Bicycle Rental Website
 
